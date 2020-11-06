@@ -8,3 +8,11 @@ logo: logo.png
 latex:
   latex_documents:
     targetname: book.tex
+
+repository:
+  branch: main
+  url: https://github.com/RojerGS/mpm
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
