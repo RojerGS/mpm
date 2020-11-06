@@ -176,6 +176,33 @@
    Funções
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemplos-completos">
+   Exemplos completos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fatorial-recursivo">
+     Fatorial recursivo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fatorial-imperativo">
+     Fatorial imperativo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fatorial-funcional">
+     Fatorial funcional
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resolucao-de-uma-equacao-quadratica">
+     Resolução de uma equação quadrática
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
         </nav>
@@ -423,6 +450,72 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello,&quot;</span> <span class="o">+</span> <span class="s2">&quot; world!&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Hello,&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot; world!&quot;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">statement1</span>
 <span class="n">statement2</span>
 <span class="n">statement3</span>
@@ -633,7 +726,7 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="card-body docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">If</span><span class="p">[</span><span class="n">condition</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="n">statements</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nv">other_statements</span><span class="w"></span>
+<span class="w">    </span><span class="n">otherStatements</span><span class="w"></span>
 <span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
@@ -868,37 +961,6 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
-    <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
-    <span class="n">x1</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="n">x2</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">QuadraticFormula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta</span><span class="o">^</span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">delta</span><span class="o">^</span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">}</span><span class="w"></span>
-<span class="p">]]</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
 </pre></div>
 </div>
@@ -959,6 +1021,142 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="section" id="exemplos-completos">
+<h2>Exemplos completos<a class="headerlink" href="#exemplos-completos" title="Permalink to this headline">¶</a></h2>
+<p>Esta secção contém alguns programas completos nas duas linguagens, para uma comparação mais geral.</p>
+<div class="section" id="fatorial-recursivo">
+<h3>Fatorial recursivo<a class="headerlink" href="#fatorial-recursivo" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">n</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Factorial</span><span class="p">[</span><span class="n">n</span><span class="mi">-1</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fatorial-imperativo">
+<h3>Fatorial imperativo<a class="headerlink" href="#fatorial-imperativo" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fact</span> <span class="o">*=</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">fact</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="n">For</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">fact</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">i</span><span class="w"></span>
+<span class="w">    </span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">fact</span><span class="w"></span>
+<span class="p">]]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="fatorial-funcional">
+<h3>Fatorial funcional<a class="headerlink" href="#fatorial-funcional" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__mul__</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">n</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="n">Times</span><span class="w"> </span><span class="o">@@</span><span class="w"> </span><span class="n">Array</span><span class="p">[</span><span class="nv">#</span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">]</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="resolucao-de-uma-equacao-quadratica">
+<h3>Resolução de uma equação quadrática<a class="headerlink" href="#resolucao-de-uma-equacao-quadratica" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">QuadraticFormula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">delta</span><span class="o">^</span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">delta</span><span class="o">^</span><span class="mf">0.5</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">}</span><span class="w"></span>
+<span class="p">]]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Claro que, em Mathematica, existem várias funções dedicadas à resolução de equações, por exemplo a função <code class="docutils literal notranslate"><span class="pre">Solve</span></code>.</p>
 </div>
 </div>
 </div>
