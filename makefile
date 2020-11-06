@@ -1,3 +1,3 @@
 publish:
 	jb build .
-	ghp-import _build/html
+	ghp-import -npf _build/html
