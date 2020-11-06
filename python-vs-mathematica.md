@@ -116,6 +116,36 @@ not True
 
 ````{panels}
 ```py
+a == b
+```
+---
+```mma
+a == b
+```
+````
+
+````{panels}
+```py
+a != b
+```
+---
+```mma
+a != b
+```
+````
+
+````{panels}
+```py
+"Hello," + " world!"
+```
+---
+```mma
+"Hello," <> " world!"
+```
+````
+
+````{panels}
+```py
 statement1
 statement2
 statement3
@@ -225,7 +255,7 @@ else:
 ```mma
 If[condition,
     statements,
-    other_statements
+    otherStatements
 ]
 ```
 ````
@@ -356,25 +386,6 @@ f = Function[{}, Module[{var},
 
 ````{panels}
 ```py
-def quadratic_formula(a, b, c):
-    delta = b**2 - 4*a*c
-    x1 = ((-b) + delta**0.5) / 2
-    x2 = ((-b) - delta**0.5) / 2
-    return x1, x2
-```
-----
-```mma
-QuadraticFormula = Function[{a, b, c}, Module[{delta, x1, x2},
-    delta = b^2 - 4*a*c;
-    x1 = ((-b) + delta^0.5) / 2;
-    x2 = ((-b) - delta^0.5) / 2;
-    {x1, x2}
-]]
-```
-````
-
-````{panels}
-```py
 lambda x: 2*x
 ```
 ---
@@ -402,3 +413,88 @@ lambda *args: print(len(args))
 Print[Length[##]]&
 ```
 ````
+
+## Exemplos completos
+
+Esta secção contém alguns programas completos nas duas linguagens, para uma comparação mais geral.
+
+### Fatorial recursivo
+
+````{panels}
+```py
+def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+```
+---
+```mma
+Fact = Function[{n},
+    If[n <= 1,
+        1,
+        n * Factorial[n-1]
+    ]
+]
+```
+````
+
+### Fatorial imperativo
+
+````{panels}
+```py
+def factorial(n):
+    fact = 1
+    for i in range(1, n+1):
+        fact *= i
+    return fact
+```
+---
+```mma
+Fact = Function[{n}, Module[{i, fact = 1},
+    For[i = 1, i <= n, i++,
+        fact *= i
+    ];
+    fact
+]]
+```
+````
+
+### Fatorial funcional
+
+````{panels}
+```py
+from functools import reduce
+def factorial(n):
+    return reduce(int.__mul__, range(1, n+1))
+```
+---
+```mma
+Fact = Function[{n},
+    Times @@ Array[#&, n]
+]
+```
+````
+
+### Resolução de uma equação quadrática
+
+````{panels}
+```py
+def quadratic_formula(a, b, c):
+    delta = b**2 - 4*a*c
+    x1 = ((-b) + delta**0.5) / 2
+    x2 = ((-b) - delta**0.5) / 2
+    return x1, x2
+```
+----
+```mma
+QuadraticFormula = Function[{a, b, c}, Module[{delta, x1, x2},
+    delta = b^2 - 4*a*c;
+    x1 = ((-b) + delta^0.5) / 2;
+    x2 = ((-b) - delta^0.5) / 2;
+    {x1, x2}
+]]
+```
+````
+
+Claro que, em Mathematica, existem várias funções dedicadas à resolução de equações, por exemplo a função `Solve`.
