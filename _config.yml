@@ -1,0 +1,10 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+#
+title: Mathematica para matemáticos
+author: Rodrigo Girão Serrão
+logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex
