@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Python vs Mathematica &#8212; Mathematica para matemáticos</title>
+    <title>Python vs Mathematica &#8212; Mathematica para matemáticos (WIP)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -56,7 +56,7 @@
   <img src="_static/logo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Mathematica para matemáticos</h1>
+  <h1 class="site-logo" id="site-title">Mathematica para matemáticos (WIP)</h1>
   
 </a>
 </div>
@@ -132,6 +132,24 @@
     
 </div>
         <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/RojerGS/mpm"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/RojerGS/mpm/issues/new?title=Issue%20on%20page%20%2F_python-vs-mathematica.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/RojerGS/mpm/edit/main/_python-vs-mathematica.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
 
 
         <!-- Full screen (wrap in <a> to have style consistency -->
@@ -462,8 +480,8 @@
 </div>
 <p><strong>Exemplo completo</strong>, implementação de uma função que resolve uma equação quadrática, dados os coeficientes.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8e873b3e-34b2-4ec9-b4d0-b50c61504d29" name="0bed3c2f-bd9b-47b0-8490-96b6946011e4" type="radio">
-</input><label class="tabbed-label" for="8e873b3e-34b2-4ec9-b4d0-b50c61504d29">
+<input checked="checked" id="3f43f847-5926-404f-aa73-189ee90d079a" name="e7e4865a-9fd0-449c-ac65-89608725b0ec" type="radio">
+</input><label class="tabbed-label" for="3f43f847-5926-404f-aa73-189ee90d079a">
 Python</label><div class="tabbed-content docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
@@ -473,8 +491,8 @@ Python</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="d885ae62-e0be-4019-ab60-8d6e43558bdf" name="0bed3c2f-bd9b-47b0-8490-96b6946011e4" type="radio">
-</input><label class="tabbed-label" for="d885ae62-e0be-4019-ab60-8d6e43558bdf">
+<input id="6f075bf0-1bc7-48ab-a06e-be6ad9050a50" name="e7e4865a-9fd0-449c-ac65-89608725b0ec" type="radio">
+</input><label class="tabbed-label" for="6f075bf0-1bc7-48ab-a06e-be6ad9050a50">
 Mathematica</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">QuadraticFormula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
@@ -540,16 +558,16 @@ Mathematica</label><div class="tabbed-content docutils">
 <p class="card-text"><em>Mathematica</em></p>
 <p class="card-text">Em Mathematica, as instruções só estão separadas quando têm um <code class="docutils literal notranslate"><span class="pre">;</span></code> entre elas. Mudar de linha é recomendado mas não é necessário.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1471cf7b-9a69-4b47-9c21-f38fddee6674" name="2f6a59b4-cd41-4319-94c2-94cdda8d20d5" type="radio">
-</input><label class="tabbed-label" for="1471cf7b-9a69-4b47-9c21-f38fddee6674">
+<input checked="checked" id="8c5f3e86-2e17-43ca-82fb-6e0e2e170f5a" name="16e2d174-8715-4876-842d-b3a6bee89d29" type="radio">
+</input><label class="tabbed-label" for="8c5f3e86-2e17-43ca-82fb-6e0e2e170f5a">
 Recomendado</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">    </span><span class="c">(* expression 1 *)</span><span class="w"></span>
 <span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">    </span><span class="c">(* expression 2 *)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<input id="de8983d2-ca82-48f1-9a67-5974c6db92ce" name="2f6a59b4-cd41-4319-94c2-94cdda8d20d5" type="radio">
-</input><label class="tabbed-label" for="de8983d2-ca82-48f1-9a67-5974c6db92ce">
+<input id="18ea4940-0289-4667-9b6d-275dcdd458a1" name="16e2d174-8715-4876-842d-b3a6bee89d29" type="radio">
+</input><label class="tabbed-label" for="18ea4940-0289-4667-9b6d-275dcdd458a1">
 Alternativa</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
 </pre></div>
