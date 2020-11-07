@@ -227,6 +227,11 @@
      Resolução de uma equação quadrática
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numeros-primos-ate-n">
+     Números primos até n
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -495,7 +500,6 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="valores-logicos">
 <h2>Valores lógicos<a class="headerlink" href="#valores-logicos" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-bs container pb-4 docutils">
@@ -838,6 +842,7 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -846,7 +851,31 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">[</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">n</span><span class="p">}]</span><span class="w"></span>
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Table</span><span class="p">[</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">}]</span><span class="w"></span>
+<span class="n">F</span><span class="w"> </span><span class="o">/@</span><span class="w"> </span><span class="n">l</span><span class="w">   </span><span class="c">(* Map[F, l] *)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">elem</span> <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">elem</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Select</span><span class="p">[</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1346,6 +1375,31 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 <p>Claro que, em Mathematica, existem várias funções dedicadas à resolução de equações, por exemplo a função <code class="docutils literal notranslate"><span class="pre">Solve</span></code>.</p>
+</div>
+<div class="section" id="numeros-primos-ate-n">
+<h3>Números primos até n<a class="headerlink" href="#numeros-primos-ate-n" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">PrimeSieve</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">n</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">primes</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="n">primes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Array</span><span class="p">[</span><span class="nv">#</span><span class="w"> </span><span class="o">&amp;</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">While</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">Length</span><span class="p">[</span><span class="n">primes</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">p</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">primes</span><span class="p">[[</span><span class="n">i</span><span class="p">]];</span><span class="w"></span>
+<span class="w">        </span><span class="n">primes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Select</span><span class="p">[</span><span class="n">primes</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nv">#</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">Mod</span><span class="p">[</span><span class="nv">#</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="w"></span>
+<span class="w">    </span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="n">primes</span><span class="w"></span>
+<span class="p">]];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>A implementação Mathematica ignora toda e qualquer função pré-definida relacionada com primos, por exemplo <code class="docutils literal notranslate"><span class="pre">PrimeQ</span></code> e <code class="docutils literal notranslate"><span class="pre">Prime</span></code>.</p>
 </div>
 </div>
 </div>

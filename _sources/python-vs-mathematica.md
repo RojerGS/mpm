@@ -155,8 +155,6 @@ Abs[z]
 ```
 ````
 
----
-
 ## Valores lógicos
 
 ````{panels}
@@ -349,10 +347,24 @@ ConstantArray[c, n]
 ````{panels}
 ```py
 [f(i) for i in range(n)]
+[f(elem) for elem in l]
 ```
 ---
 ```mma
-Table[F[i], {n}]
+Table[F[i], {i, n}]
+F /@ l   (* Map[F, l] *)
+```
+````
+
+---
+
+````{panels}
+```py
+[elem for elem in l if p(elem)]
+```
+---
+```mma
+Select[l, P]
 ```
 ````
 
@@ -651,3 +663,23 @@ QuadraticFormula = Function[{a, b, c}, Module[{delta, x1, x2},
 ````
 
 Claro que, em Mathematica, existem várias funções dedicadas à resolução de equações, por exemplo a função `Solve`.
+
+### Números primos até n
+
+````{panels}
+
+---
+```mma
+PrimeSieve = Function[{n}, Module[{primes, p = 1, i = 1},
+    primes = Array[# &, n - 1, 2];
+    While[i <= Length[primes] && p^2 < n,
+        p = primes[[i]];
+        primes = Select[primes, (# <= p || Mod[#, p] > 0) &];
+        i++
+    ];
+    primes
+]];
+```
+````
+
+A implementação Mathematica ignora toda e qualquer função pré-definida relacionada com primos, por exemplo `PrimeQ` e `Prime`.
