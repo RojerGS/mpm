@@ -155,8 +155,6 @@ Abs[z]
 ```
 ````
 
----
-
 ## Valores lógicos
 
 ````{panels}
@@ -349,10 +347,24 @@ ConstantArray[c, n]
 ````{panels}
 ```py
 [f(i) for i in range(n)]
+[f(elem) for elem in l]
 ```
 ---
 ```mma
-Table[F[i], {n}]
+Table[F[i], {i, n}]
+F /@ l   (* Map[F, l] *)
+```
+````
+
+---
+
+````{panels}
+```py
+[elem for elem in l if p(elem)]
+```
+---
+```mma
+Select[l, P]
 ```
 ````
 
