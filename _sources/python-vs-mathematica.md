@@ -228,13 +228,9 @@ Or  @@ booleanList
 range(n)
 ```
 ---
-
----
-
 ```mma
 Array[#&, n]       (* first `n` indices          *)
 Array[#&, n] - 1   (* integers from `0` to `n-1` *)
-```
 ```
 `````
 
