@@ -68,14 +68,7 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Introdução
-  </a>
- </li>
-</ul>
-<ul class="current nav sidenav_l1">
+  <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Python vs Mathematica
@@ -170,8 +163,23 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basico">
-   Básico
+  <a class="reference internal nav-link" href="#sintaxe">
+   Sintaxe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numeros">
+   Números
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valores-logicos">
+   Valores lógicos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#texto">
+   Texto
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -241,14 +249,142 @@ em conta essa diferença.</p>
 <p>Por favor, note-se que a tradução direta de código Python para código Mathematica é, em geral, um desperdício de funcionalidades
 porque o Mathematica tem vários mecanismos muito poderosos que Python não tem.
 Ainda assim, se o código funciona… bestial.</p>
-<div class="section" id="basico">
-<h2>Básico<a class="headerlink" href="#basico" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sintaxe">
+<h2>Sintaxe<a class="headerlink" href="#sintaxe" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># comment</span>
+<span class="sd">&quot;&quot;&quot;multiline</span>
+<span class="sd">comment&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="c">(* multiline</span>
+<span class="c">comment *)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">var1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">other_variable</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">otherVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Function</span><span class="p">[</span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">arg2</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Null</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
+<span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w">   </span><span class="c">(* Equal[a, b]   *)</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="w">   </span><span class="c">(* Unequal[a, b] *)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numeros">
+<h2>Números<a class="headerlink" href="#numeros" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 </div>
 </div>
@@ -257,7 +393,11 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Plus[1, 2] *)</span><span class="w"></span>
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Plus[1, 2]     *)</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Subtract[1, 2] *)</span><span class="w"></span>
+<span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="c">(* Times[1, 2]    *)</span><span class="w"></span>
+<span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Divide[1, 2]   *)</span><span class="w"></span>
+<span class="mi">3</span><span class="o">^</span><span class="mi">2</span><span class="w">     </span><span class="c">(* Power[3, 2]    *)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -265,100 +405,15 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Subtract[1, 2] *)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w">   </span><span class="c">(* Times[1, 2] *)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* Divide[1, 2] *)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="o">^</span><span class="mi">2</span><span class="w">   </span><span class="c">(* Power[3, 2] *)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">15</span> <span class="o">%</span> <span class="mi">4</span>
+<span class="mi">15</span> <span class="o">//</span> <span class="mi">4</span>
+<span class="nb">divmod</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -368,6 +423,8 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Mod</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"></span>
+<span class="n">Quotient</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"></span>
+<span class="n">QuotientRemainder</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -375,12 +432,16 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">15</span> <span class="o">//</span> <span class="mi">4</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span>
+<span class="n">z</span><span class="o">.</span><span class="n">real</span>
+<span class="n">z</span><span class="o">.</span><span class="n">imag</span>
+<span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -389,7 +450,10 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Quotient</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"></span>
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="n">I</span><span class="w"></span>
+<span class="n">Re</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"></span>
+<span class="n">Im</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"></span>
+<span class="n">Abs</span><span class="p">[</span><span class="n">z</span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -397,12 +461,72 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="o">&gt;</span>  <span class="mi">3</span>
+<span class="mi">3</span> <span class="o">&lt;</span>  <span class="mi">4</span>
+<span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">6</span>
+<span class="mi">7</span> <span class="o">&lt;=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span><span class="w"> </span><span class="o">&gt;</span><span class="w">  </span><span class="mi">3</span><span class="w">   </span><span class="c">(* Greater[4, 3]      *)</span><span class="w"></span>
+<span class="mi">3</span><span class="w"> </span><span class="o">&lt;</span><span class="w">  </span><span class="mi">4</span><span class="w">   </span><span class="c">(* Less[3, 4]         *)</span><span class="w"></span>
+<span class="mi">5</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">6</span><span class="w">   </span><span class="c">(* GreaterEqual[5, 6] *)</span><span class="w"></span>
+<span class="mi">7</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="w">   </span><span class="c">(* LessEqual[7, 2]    *)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="valores-logicos">
+<h2>Valores lógicos<a class="headerlink" href="#valores-logicos" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span>
+<span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">True</span><span class="p">;</span><span class="w"></span>
+<span class="n">False</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
+<span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+<span class="ow">not</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -412,6 +536,8 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">True</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">False</span><span class="w">   </span><span class="c">(* Or[True, False] *)</span><span class="w"></span>
+<span class="n">True</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">False</span><span class="w">   </span><span class="c">(* And[True, False] *)</span><span class="w"></span>
+<span class="o">!</span><span class="n">True</span><span class="w">           </span><span class="c">(* Not[True] *)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -419,12 +545,14 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">boolean_list</span><span class="p">)</span>
+<span class="nb">any</span><span class="p">(</span><span class="n">boolean_list</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -433,7 +561,8 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">True</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">False</span><span class="w">   </span><span class="c">(* And[True, False] *)</span><span class="w"></span>
+<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">And</span><span class="w"> </span><span class="o">@@</span><span class="w"> </span><span class="n">booleanList</span><span class="w"></span>
+<span class="n">Or</span><span class="w">  </span><span class="o">@@</span><span class="w"> </span><span class="n">booleanList</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -441,72 +570,9 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">True</span>
-</pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="o">!</span><span class="n">True</span><span class="w">   </span><span class="c">(* Not[True] *)</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<div class="section" id="texto">
+<h2>Texto<a class="headerlink" href="#texto" title="Permalink to this headline">¶</a></h2>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -522,32 +588,6 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;Hello,&quot;</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="s">&quot; world!&quot;</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">statement1</span>
-<span class="n">statement2</span>
-<span class="n">statement3</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
-<div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">statement1</span><span class="p">;</span><span class="w"></span>
-<span class="n">statement2</span><span class="p">;</span><span class="w"></span>
-<span class="n">statement3</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -580,6 +620,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -588,6 +629,12 @@ Ainda assim, se o código funciona… bestial.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
 </div>
 </div>
 </div>
@@ -606,6 +653,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -628,6 +676,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -650,6 +699,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -672,6 +722,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -725,6 +776,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -753,6 +805,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -784,6 +837,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -815,6 +869,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -840,6 +895,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -865,6 +921,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -891,6 +948,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -947,6 +1005,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -974,6 +1033,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -996,6 +1056,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
@@ -1018,6 +1079,7 @@ Ainda assim, se o código funciona… bestial.</p>
 </div>
 </div>
 </div>
+<hr class="docutils" />
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
