@@ -12,127 +12,192 @@ Por favor, note-se que a tradução direta de código Python para código Mathem
 porque o Mathematica tem vários mecanismos muito poderosos que Python não tem.
 Ainda assim, se o código funciona... bestial.
 
-## Básico
+## Sintaxe
+
+````{panels}
+```py
+# comment
+"""multiline
+comment"""
+```
+---
+```mma
+(* multiline
+comment *)
+```
+````
+
+---
+
+````{panels}
+```py
+var1 = 1
+other_variable = 0
+```
+---
+```mma
+var1 = 1;
+otherVariable = 0
+```
+````
+
+---
+
+````{panels}
+```py
+function(arg1, arg2)
+```
+---
+```mma
+Function[arg1, arg2]
+```
+````
+
+---
+
+````{panels}
+```py
+None
+```
+---
+```mma
+Null
+```
+````
+
+---
+
+````{panels}
+```py
+a == b
+a != b
+```
+---
+```mma
+a == b   (* Equal[a, b]   *)
+a != b   (* Unequal[a, b] *)
+```
+````
+
+## Números
 
 ````{panels}
 ```py
 1 + 2
-```
----
-```mma
-1 + 2   (* Plus[1, 2] *)
-```
-````
-
-````{panels}
-```py
 1 - 2
-```
----
-```mma
-1 - 2   (* Subtract[1, 2] *)
-```
-````
-
-````{panels}
-```py
 2 * 3
-```
----
-```mma
-2 * 3   (* Times[1, 2] *)
-```
-````
-
-````{panels}
-```py
 1 / 2
-```
----
-```mma
-1 / 2   (* Divide[1, 2] *)
-```
-````
-
-````{panels}
-```py
 3**2
 ```
 ---
 ```mma
-3^2   (* Power[3, 2] *)
+1 + 2   (* Plus[1, 2]     *)
+1 - 2   (* Subtract[1, 2] *)
+2 * 3   (* Times[1, 2]    *)
+1 / 2   (* Divide[1, 2]   *)
+3^2     (* Power[3, 2]    *)
 ```
 ````
+
+---
 
 ````{panels}
 ```py
 15 % 4
+15 // 4
+divmod(15, 4)
 ```
 ---
 ```mma
 Mod[15, 4]
+Quotient[15, 4]
+QuotientRemainder[15, 4]
 ```
 ````
 
+---
+
 ````{panels}
 ```py
-15 // 4
+z = 4 + 2j
+z.real
+z.imag
+abs(z)
 ```
 ---
 ```mma
-Quotient[15, 4]
+z = 4 + 2I
+Re[z]
+Im[z]
+Abs[z]
 ```
 ````
+
+---
+
+````{panels}
+```py
+4 >  3
+3 <  4
+5 >= 6
+7 <= 2
+```
+---
+```mma
+4 >  3   (* Greater[4, 3]      *)
+3 <  4   (* Less[3, 4]         *)
+5 >= 6   (* GreaterEqual[5, 6] *)
+7 <= 2   (* LessEqual[7, 2]    *)
+```
+````
+
+---
+
+## Valores lógicos
+
+````{panels}
+```py
+True
+False
+```
+---
+```mma
+True;
+False
+```
+````
+
+---
 
 ````{panels}
 ```py
 True or False
-```
----
-```mma
-True || False   (* Or[True, False] *)
-```
-````
-
-````{panels}
-```py
 True and False
-```
----
-```mma
-True && False   (* And[True, False] *)
-```
-````
-
-````{panels}
-```py
 not True
 ```
 ---
 ```mma
-!True   (* Not[True] *)
+True || False   (* Or[True, False] *)
+True && False   (* And[True, False] *)
+!True           (* Not[True] *)
 ```
 ````
 
-````{panels}
-```py
-a == b
-```
 ---
-```mma
-a == b
-```
-````
 
 ````{panels}
 ```py
-a != b
+all(boolean_list)
+any(boolean_list)
 ```
 ---
 ```mma
-a != b
+And @@ booleanList
+Or  @@ booleanList
 ```
 ````
+
+## Texto
 
 ````{panels}
 ```py
@@ -141,20 +206,6 @@ a != b
 ---
 ```mma
 "Hello," <> " world!"
-```
-````
-
-````{panels}
-```py
-statement1
-statement2
-statement3
-```
----
-```mma
-statement1;
-statement2;
-statement3
 ```
 ````
 
@@ -170,20 +221,24 @@ statement3
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 range(n)
 ```
 ---
 
+---
 
 ```mma
 Array[#&, n]       (* first `n` indices          *)
 Array[#&, n] - 1   (* integers from `0` to `n-1` *)
 ```
 ```
-
 `````
+
+---
 
 ````{panels}
 ```py
@@ -195,6 +250,8 @@ Array[#&, b-a, a]   (* integers from `a` to `b-1` *)
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 range(a, b, step)
@@ -205,6 +262,8 @@ a + step*Array[#&, Quotient[b-a, step], 0]   (* integers `a`, `a+step`, ... belo
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 [c for _ in range(n)]
@@ -214,6 +273,8 @@ a + step*Array[#&, Quotient[b-a, step], 0]   (* integers `a`, `a+step`, ... belo
 ConstantArray[c, n]
 ```
 ````
+
+---
 
 ````{panels}
 ```py
@@ -244,6 +305,8 @@ If[condition,
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 if condition:
@@ -259,6 +322,8 @@ If[condition,
 ]
 ```
 ````
+
+---
 
 ````{panels}
 ```py
@@ -279,6 +344,8 @@ Which[
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 if cond1:
@@ -298,6 +365,8 @@ Which[
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 while condition:
@@ -310,6 +379,8 @@ While[condition,
 ]
 ```
 ````
+
+---
 
 ````{panels}
 ```py
@@ -324,6 +395,8 @@ For[i = 0, i < n, i++,
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 for elem in iterable:
@@ -337,6 +410,8 @@ For[i = 1, i <= Length[iterable], i++,
 ]
 ```
 ````
+
+---
 
 ````{panels}
 ```py
@@ -369,6 +444,8 @@ f = Function[{arg1, arg2},
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 def f():
@@ -384,6 +461,8 @@ f = Function[{}, Module[{var},
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 lambda x: 2*x
@@ -394,6 +473,8 @@ lambda x: 2*x
 ```
 ````
 
+---
+
 ````{panels}
 ```py
 lambda x, y: x + y
@@ -403,6 +484,8 @@ lambda x, y: x + y
 (#1 + #2)&
 ```
 ````
+
+---
 
 ````{panels}
 ```py
