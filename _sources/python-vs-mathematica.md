@@ -31,13 +31,17 @@ comment *)
 
 ````{panels}
 ```py
-var1 = 1
+var = 1
 other_variable = 0
+var1, var2 = 2, 3
+del var
 ```
 ---
 ```mma
-var1 = 1;
+var = 1   (* Set[var1, 1] *)
 otherVariable = 0
+{var1, var2} = {2, 3}
+Clear[var]
 ```
 ````
 
@@ -209,15 +213,85 @@ Or  @@ booleanList
 ```
 ````
 
+---
+
+````{panels}
+```py
+s.upper()
+s.lower()
+s.capitalize()
+```
+---
+```mma
+ToUpperCase[s]
+ToLowerCase[s]
+Capitalize[s]
+```
+````
+
 ## Listas
 
 ````{panels}
 ```py
-[1, 2, 3]
+l = [1, 2, 3]
+len(l)
 ```
 ---
 ```mma
-{1, 2, 3}
+l = {1, 2, 3}
+Len[l]
+```
+````
+
+---
+
+````{panels}
+```py
+l[0]
+l[-1]
+l[a:b]
+l[::-1]
+```
+---
+```mma
+l[[0]]
+l[[-1]]
+Take[l, {a, b}]
+Reverse[l]
+```
+````
+
+---
+
+````{panels}
+```py
+l = [1, 2, 3]
+l.append(4)
+l.pop()
+l.insert(pos, obj)
+```
+---
+```mma
+l = {1, 2, 3}
+AppendTo[l, 4]
+l = Drop[l, -1]
+l = Insert[l, obj, pos]
+```
+````
+
+---
+
+````{panels}
+```py
+[0, 1, 2] + [3]
+[0] + [1, 2, 3]
+[0, 1] + [2, 3]
+```
+---
+```mma
+Append[{0, 1, 2}, 3]
+Prepend[{1, 2, 3}, 0]
+Join[{0, 1}, {2, 3}]
 ```
 ````
 
