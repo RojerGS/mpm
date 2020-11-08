@@ -2,4 +2,5 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: home
+- file: intro
 - file: python-vs-mathematica
