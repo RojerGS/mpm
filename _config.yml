@@ -7,7 +7,7 @@ logo: logo.png
 
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: mpm.tex
 
 repository:
   branch: main
