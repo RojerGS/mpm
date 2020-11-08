@@ -26,6 +26,8 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -68,6 +70,11 @@
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Introdução
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python-vs-mathematica.html">
    Python vs Mathematica
@@ -473,8 +480,8 @@
 </div>
 <p><strong>Exemplo completo</strong>, implementação de uma função que resolve uma equação quadrática, dados os coeficientes.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="00903d0e-e03c-408c-97e8-1b45be89ce97" name="c94a4eb2-bc3a-4e47-b4c3-24e8795731be" type="radio">
-</input><label class="tabbed-label" for="00903d0e-e03c-408c-97e8-1b45be89ce97">
+<input checked="checked" id="03be5ed9-bdb4-4a28-aabb-17f52c92748f" name="cae0a2de-9a9e-431b-a57c-f8bdffa0c579" type="radio">
+</input><label class="tabbed-label" for="03be5ed9-bdb4-4a28-aabb-17f52c92748f">
 Python</label><div class="tabbed-content docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
@@ -484,8 +491,8 @@ Python</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ab7d822b-d2d2-4a6c-866f-fe44d031dcc2" name="c94a4eb2-bc3a-4e47-b4c3-24e8795731be" type="radio">
-</input><label class="tabbed-label" for="ab7d822b-d2d2-4a6c-866f-fe44d031dcc2">
+<input id="b579a249-3fd6-4d70-9107-2574211113cc" name="cae0a2de-9a9e-431b-a57c-f8bdffa0c579" type="radio">
+</input><label class="tabbed-label" for="b579a249-3fd6-4d70-9107-2574211113cc">
 Mathematica</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">QuadraticFormula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
@@ -551,16 +558,16 @@ Mathematica</label><div class="tabbed-content docutils">
 <p class="card-text"><em>Mathematica</em></p>
 <p class="card-text">Em Mathematica, as instruções só estão separadas quando têm um <code class="docutils literal notranslate"><span class="pre">;</span></code> entre elas. Mudar de linha é recomendado mas não é necessário.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="23f76fff-5729-42c2-84d6-d97fe1939c54" name="1ff670dd-728c-4d15-91f1-f967f8cb9799" type="radio">
-</input><label class="tabbed-label" for="23f76fff-5729-42c2-84d6-d97fe1939c54">
+<input checked="checked" id="23dbf41d-2a1d-42d6-8027-cbb17cc4363f" name="8e24f58e-c19f-4ea1-9356-0e75aa6bab26" type="radio">
+</input><label class="tabbed-label" for="23dbf41d-2a1d-42d6-8027-cbb17cc4363f">
 Recomendado</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">    </span><span class="c">(* expression 1 *)</span><span class="w"></span>
 <span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">    </span><span class="c">(* expression 2 *)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<input id="5990dfc5-122c-410d-aea1-eef5faf3edfd" name="1ff670dd-728c-4d15-91f1-f967f8cb9799" type="radio">
-</input><label class="tabbed-label" for="5990dfc5-122c-410d-aea1-eef5faf3edfd">
+<input id="bb52e281-a6fd-4a0f-85bf-ebb886717f12" name="8e24f58e-c19f-4ea1-9356-0e75aa6bab26" type="radio">
+</input><label class="tabbed-label" for="bb52e281-a6fd-4a0f-85bf-ebb886717f12">
 Alternativa</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
 </pre></div>

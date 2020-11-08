@@ -667,7 +667,16 @@ Claro que, em Mathematica, existem várias funções dedicadas à resolução de
 ### Números primos até n
 
 ````{panels}
-
+```py
+def prime_sieve(n):
+    primes = list(range(2, n+1))
+    i = 1
+    while i < len(primes):
+        p = primes[i]
+        primes = list(filter(lambda t: t <= p or t%p, primes))
+        i += 1
+    return primes
+```
 ---
 ```mma
 PrimeSieve = Function[{n}, Module[{primes, p = 1, i = 1},

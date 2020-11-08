@@ -26,6 +26,8 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -36,6 +38,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python vs Mathematica" href="python-vs-mathematica.html" />
+    <link rel="prev" title="Introdução" href="home.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -68,7 +71,12 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+  <ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introdução
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python-vs-mathematica.html">
    Python vs Mathematica
@@ -116,9 +124,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -139,7 +147,7 @@
             href="https://github.com/RojerGS/mpm/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/RojerGS/mpm/edit/main/intro.md"><button
+        <a class="edit-button" href="https://github.com/RojerGS/mpm/edit/main/intro.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -152,6 +160,28 @@
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/RojerGS/mpm/main?urlpath=tree/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/RojerGS/mpm/blob/main/intro.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
     </div>
 
@@ -172,13 +202,180 @@
                 
   <div class="section" id="introducao">
 <h1>Introdução<a class="headerlink" href="#introducao" title="Permalink to this headline">¶</a></h1>
-<p>Este pequeno livro surge porque <a class="reference external" href="https://www.wolfram.com/mathematica/">Mathematica</a> é uma linguagem de programação usada no curso de LMAC, no Instituto Superior Técnico.</p>
-<p>Apesar de ser bastante poderosa, muitas vezes a introdução à linguagem é insuficiente para que os alunos se habituem à mesma e a possam usar de forma eficaz.
-Isto acaba por se tornar num problema quando certas cadeiras (tipicamente da área de análise numérica) pressionam os alunos para fazerem os trabalhos
-computacionais em Mathematica. A inexperiência que os alunos tipicamente têm com a linguagem faz com que esses trabalhos sejam particularmente morosos de concluir.</p>
-<p>É por esse motivo que escrevi este booklet, cujo objetivo <em>não</em> é ensinar os conceitos de programação em si, mas sim ensinar a programar em Mathematica.</p>
-<p>Este livro foi escrito para a versão 12.0 do Mathematica mas deve funcionar, em grande parte, com versões superiores do software.</p>
-<div class="toctree-wrapper compound">
+<p>Este capítulo pretende introduzir o leitor à programação em Mathematica. Vamos assumir que o leitor está minimamente familiarizado com os conceitos de programação.</p>
+<p>O Mathematica é extremamente poderoso por causa do seu sistema de programação simbólica, que vamos explorar mais tarde. Para além disso, o Mathematica tem, no momento em que este parágrafo foi escrito, <a class="reference external" href="https://reference.wolfram.com/language/guide/AlphabeticalListing">quase 6000 funções pré-definidas</a>.</p>
+<p>No entanto, vamos começar por introduzir o Mathematica como uma linguagem de programação “clássica”. Nesse sentido, o Mathematica funciona como qualquer outra linguagem de programação, na medida em que podemos atribuir valores a variáveis, para que nos possamos referir aos valores por nomes específicos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#51;</pre></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#53;</pre></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">];</span><span class="w"></span>
+<span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">];</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Atribuição de valores a variáveis é feito com um único sinal de <code class="docutils literal notranslate"><span class="pre">=</span></code> e podemos ver desde já dois elementos sintáticos importantes:</p>
+<ul class="simple">
+<li><p>instruções consecutivas devem ser separadas por <code class="docutils literal notranslate"><span class="pre">;</span></code>, já que o Mathematica ignora quase todo o espaço em branco quando executa as suas instruções;</p></li>
+<li><p>as funções de Mathematica têm a primeira letra maiúscula e as funções são chamadas com parêntesis retos. A função <code class="docutils literal notranslate"><span class="pre">Print</span></code> imprime o seu argumento.</p></li>
+</ul>
+<p>Dissemos aqui que “quase todo o espaço em branco é ignorado”. Uma exceção notável são espaços entre duas expressões, que são interpretados como uma multiplicação. Isto decorre da convenção matemática de que <span class="math notranslate nohighlight">\(3x\)</span> significa <span class="math notranslate nohighlight">\(3 \times x\)</span>. De modo semelhante,</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span><span class="w"> </span><span class="n">var</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#50;&#55;</pre></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="n">var</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#56;&#49;</pre></div></div></div>
+</div>
+<p>Esta interpretação é elegante em alguns casos, mas pode esconder bugs problemáticos, por exemplo quando nos esquecemos de separar duas instruções com <code class="docutils literal notranslate"><span class="pre">;</span></code>. Por exemplo, note-se a diferença entre</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#52;</pre></div></div></div>
+</div>
+<p>e</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">Set</span>::write: Tag Times in 0 2 is Protected.
+</pre></div>
+</div>
+<div class="output text_html"><div><pre style="&#102;&#111;&#110;&#116;&#45;&#102;&#97;&#109;&#105;&#108;&#121;&#58;&#32;&#34;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#32;&#78;&#101;&#119;&#34;&#44;&#67;&#111;&#117;&#114;&#105;&#101;&#114;&#44;&#109;&#111;&#110;&#111;&#115;&#112;&#97;&#99;&#101;&#59;">&#52;</pre></div></div></div>
+</div>
+<p>As mensagens de erro do Mathematica podem revelar-se bastante crípticas mas aprender a lê-las é uma excelente capacidade para se ter quando se programa em Mathematica. A mensagem de erro começa com o nome da função dentro da qual o erro foi gerado. De seguida, vem o erro propriamente dito.</p>
+<p>Uma mensagem do estilo <code class="docutils literal notranslate"><span class="pre">Tag</span> <span class="pre">X</span> <span class="pre">in</span> <span class="pre">X</span> <span class="pre">is</span> <span class="pre">Protected</span></code> geralmente significa que se tentou fazer alguma atribuição que não podia ser feita. De facto, o Mathematica proíbe-nos de atribuírmos os nossos próprios valores às funções pré-definidas. Antes de conseguirmos interpretar a mensagem de erro, temos de perceber que <em>quase</em> tudo no Mathematica é uma função, mesmo as operações que têm equivalentes simbólicos.</p>
+<p>Por exemplo, <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">+</span> <span class="pre">3</span></code> e <code class="docutils literal notranslate"><span class="pre">Plus[2,</span> <span class="pre">3]</span></code> são a mesma expressão.</p>
+<p>Mas em Mathematica isto é mais profundo e ultrapassa as simples operações matemáticas. A atribuição de valores a variáveis também é uma função:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Set</span><span class="p">[</span><span class="n">var</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
+<span class="n">Print</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tal como é a sequenciação de instruções:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-mathematica notranslate"><div class="highlight"><pre><span></span><span class="n">CompoundExpression</span><span class="p">[</span><span class="n">Print</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">5</span><span class="p">]]</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -191,16 +388,16 @@ computacionais em Mathematica. A inexperiência que os alunos tipicamente têm c
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "wolframlanguage12"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "wolframlanguage12",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'wolframlanguage12'</script>
 
               </div>
               
@@ -210,6 +407,7 @@ computacionais em Mathematica. A inexperiência que os alunos tipicamente têm c
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="home.html" title="previous page">Introdução</a>
     <a class='right-next' id="next-link" href="python-vs-mathematica.html" title="next page">Python vs Mathematica</a>
 
     </div>
