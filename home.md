@@ -1,4 +1,4 @@
-# Introdução
+# Mathematica para matemáticos
 
 Este pequeno livro surge porque [Mathematica] é uma linguagem de programação usada no curso de LMAC, no Instituto Superior Técnico.
 
