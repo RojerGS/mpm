@@ -26,7 +26,7 @@
     <script src="_static/copybutton.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -480,8 +480,8 @@
 </div>
 <p><strong>Exemplo completo</strong>, implementação de uma função que resolve uma equação quadrática, dados os coeficientes.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d6071b3a-08b1-4967-9b66-3c048ee188ec" name="142ef2f8-3063-4922-b2ec-3f0f3017745a" type="radio">
-</input><label class="tabbed-label" for="d6071b3a-08b1-4967-9b66-3c048ee188ec">
+<input checked="checked" id="0e17c1d0-057c-44f9-a0e0-9b81329aabcb" name="331bde18-7b87-4b79-854f-ea5d6507f54b" type="radio">
+</input><label class="tabbed-label" for="0e17c1d0-057c-44f9-a0e0-9b81329aabcb">
 Python</label><div class="tabbed-content docutils">
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
@@ -491,8 +491,8 @@ Python</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="1aed32fe-ad12-4162-ba71-0af7ee9c64b7" name="142ef2f8-3063-4922-b2ec-3f0f3017745a" type="radio">
-</input><label class="tabbed-label" for="1aed32fe-ad12-4162-ba71-0af7ee9c64b7">
+<input id="b4d4d7b9-64f6-4d07-9ddc-c4e715894dc7" name="331bde18-7b87-4b79-854f-ea5d6507f54b" type="radio">
+</input><label class="tabbed-label" for="b4d4d7b9-64f6-4d07-9ddc-c4e715894dc7">
 Mathematica</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">QuadraticFormula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Function</span><span class="p">[{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">},</span><span class="w"> </span><span class="n">Module</span><span class="p">[{</span><span class="n">delta</span><span class="p">,</span><span class="w"> </span><span class="n">x1</span><span class="p">,</span><span class="w"> </span><span class="n">x2</span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="n">delta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
@@ -558,16 +558,16 @@ Mathematica</label><div class="tabbed-content docutils">
 <p class="card-text"><em>Mathematica</em></p>
 <p class="card-text">Em Mathematica, as instruções só estão separadas quando têm um <code class="docutils literal notranslate"><span class="pre">;</span></code> entre elas. Mudar de linha é recomendado mas não é necessário.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3580667f-bfe1-4fef-a335-a9d7c3ddd4c8" name="72624074-36a0-4230-bbac-199c68ade115" type="radio">
-</input><label class="tabbed-label" for="3580667f-bfe1-4fef-a335-a9d7c3ddd4c8">
+<input checked="checked" id="a0deafe7-a621-41e9-b02c-15c471512be0" name="199ca597-0c87-4b7c-b4b5-475c742c863f" type="radio">
+</input><label class="tabbed-label" for="a0deafe7-a621-41e9-b02c-15c471512be0">
 Recomendado</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w">    </span><span class="c">(* expression 1 *)</span><span class="w"></span>
 <span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w">    </span><span class="c">(* expression 2 *)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
-<input id="f58509eb-69db-4377-8d54-95be2e151730" name="72624074-36a0-4230-bbac-199c68ade115" type="radio">
-</input><label class="tabbed-label" for="f58509eb-69db-4377-8d54-95be2e151730">
+<input id="3f5750f6-3fcb-4acc-9242-57e142d2ea40" name="199ca597-0c87-4b7c-b4b5-475c742c863f" type="radio">
+</input><label class="tabbed-label" for="3f5750f6-3fcb-4acc-9242-57e142d2ea40">
 Alternativa</label><div class="tabbed-content docutils">
 <div class="highlight-mma notranslate"><div class="highlight"><pre><span></span><span class="n">Print</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">Print</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
 </pre></div>
