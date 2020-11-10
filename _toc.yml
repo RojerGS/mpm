@@ -3,4 +3,7 @@
 #
 - file: home
 - file: intro
+- file: listas
+- file: funcional
+- file: simbolico
 - file: python-vs-mathematica
